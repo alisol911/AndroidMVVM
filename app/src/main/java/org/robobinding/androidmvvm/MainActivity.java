@@ -12,7 +12,7 @@ import android.view.View;
 * @version $Revision: 1.0 $
 * @author Cheng Wei
 */
-public class MainActivity extends Activity {
+public class MainActivity extends android.support.v7.app.ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

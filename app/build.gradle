@@ -14,7 +14,7 @@ apply plugin: 'com.neenbedankt.android-apt'
 
 android {
 	compileSdkVersion 21
-	buildToolsVersion "21.1.1"
+	buildToolsVersion "22.0.1"
 	
 	defaultConfig {
 		minSdkVersion 8
@@ -48,14 +48,21 @@ repositories {
 }
 
 ext {
-	robobindingVersion = 'latest.integration'
-	//robobindingVersion = '0.8.6-SNAPSHOT'
+	//robobindingVersion = 'latest.integration'
+	robobindingVersion = '0.8.9'
 }
 
 dependencies {
 	compile("org.robobinding:robobinding:$robobindingVersion:with-dependencies") {
         exclude group: 'com.google.guava', module: 'guava'
     }
+
+    // works
+    //compile 'com.android.support:appcompat-v7:21.0.3'
+    
+    // does not work
+    compile 'com.android.support:appcompat-v7:22.2.0'
+    
     apt "org.robobinding:codegen:$robobindingVersion"
 }
 
